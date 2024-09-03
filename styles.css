@@ -1,0 +1,59 @@
+/* establishes grid stuff */
+
+.item1 { grid-area: header; }
+.item2 { grid-area: menu; }
+.item3 { grid-area: main; }
+.item4 { grid-area: right; }
+.item5 { grid-area: footer; }
+
+/* creates container */
+
+.grid-container {
+
+display: flex;
+flex-direction: column;
+grid-template-areas:
+'header header header header header header'
+'menu main main main right right'
+'menu footer footer footer footer footer';
+height: 300%;
+display: flex;
+flex-direction: column;
+text-align: center;
+grid-gap: 10px;
+
+}
+
+/* establishes a sidebar, that does not actually work*/
+
+aside{
+    background-color: rgb(156, 156, 238);
+    grid-area: side;
+    height: 300%;
+    color: white;
+    padding-left: 5%;
+    grid-area: menu;  
+    background-color: rgb(135, 80, 8);
+    text-align: left;
+}
+
+/* makes the boxes red */
+
+.grid-container > div {
+background-color: rgba(191, 0, 0, 0.8);
+text-align: center;
+padding: 20px 0;
+font-size: 30px;
+}
+
+/* makes header the header */
+
+header{height: 300%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    grid-gap: 10px;
+    grid-area: header;
+    background-color: antiquewhite;
+    text-align: center;
+}
